@@ -1,0 +1,55 @@
+
+  <table class="table-item">
+    <tr>
+      <td [ngClass]="'pictures-adress'">
+        <table>
+          <tr>
+            <th>
+                <img
+                  alt=""
+                  height="66px"
+                  width="110px"
+                  src= {{re.pictures[1]}}
+                />
+            </th>
+            <th>
+              <h5>
+                {{ re.address.number}} {{ re.address.street}}
+              </h5>
+              <p>
+                {{re.about.type}}
+                {{ re.address.city}}
+                {{ re.address.neighborhood}}
+              </p>
+            </th>
+          </tr>
+        </table>
+      </td>
+      <td [ngClass]="'about'">
+        <table       >
+          <tr >
+            <th >
+              {{ re.about.squaremeter
+                ? " " +  re.about.squaremeter
+                : ""}}
+            </th>
+            <th>
+              {{ re.about.floor ? " " +  re.about.floor : ""}}
+            </th>
+            <th>
+              {{ re.about.rooms ? " " +  re.about.rooms : ""}}
+            </th>
+          </tr>
+          <tr [ngClass]="'footer'" >
+            <th ><span>squaremeter</span>  </th>
+            <th> <span>floor</span> </th>
+            <th><span>rooms</span> </th>
+          </tr>
+        </table>
+      </td>
+      <td [ngClass]="'price'">
+        {{ re.price ? "$ " +  re.price : "not mentioned"}}
+      </td>
+    </tr>
+  </table>
+
